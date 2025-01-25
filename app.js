@@ -8,24 +8,31 @@ const categories_json = require("./json_objects/categories.json");
 const category_list_json = require("./json_objects/category-list.json");
 
 const search_fields = ["title", "description", "category"];
-const stop_words = [
-  "a",
-  "an",
-  "and",
-  "the",
-  "but",
-  "or",
-  "on",
-  "in",
-  "with",
-  "at",
-  "by",
-  "for",
-  "to",
-  "of",
-  "from",
-];
 
+const stop_words = [
+  "a", "about", "above", "across", "after", "again", "against", "all", "almost", "alone", 
+    "along", "already", "also", "although", "always", "am", "among", "an", "and", "another", 
+    "any", "anybody", "anyone", "anything", "anywhere", "are", "around", "as", "at", "away", 
+    "back", "be", "because", "before", "behind", "being", "below", "between", "both", "but", 
+    "by", "can", "could", "did", "do", "does", "doing", "down", "during", "each", "either", 
+    "enough", "even", "every", "everybody", "everyone", "everything", "everywhere", "for", 
+    "from", "further", "had", "has", "have", "having", "he", "he'd", "he'll", "he's", "her", 
+    "here", "herself", "him", "himself", "his", "how", "however", "i", "i'd", "i'll", "i'm", 
+    "i've", "if", "in", "indeed", "into", "is", "it", "it's", "its", "itself", "just", "keep", 
+    "know", "like", "likely", "look", "made", "make", "many", "may", "me", "might", "more", 
+    "most", "much", "must", "my", "myself", "near", "neither", "never", "new", "next", "no", 
+    "nobody", "none", "noone", "nor", "not", "nothing", "now", "nowhere", "of", "off", "on", 
+    "once", "one", "only", "onto", "or", "other", "others", "our", "ours", "ourselves", "out", 
+    "over", "own", "quite", "rather", "really", "same", "see", "seem", "seemed", "seems", 
+    "several", "she", "she'd", "she'll", "she's", "should", "show", "side", "since", "so", 
+    "some", "somebody", "someone", "something", "somewhere", "still", "such", "take", "than", 
+    "that", "the", "their", "them", "themselves", "then", "there", "there's", "these", "they", 
+    "they'd", "they'll", "they're", "they've", "this", "those", "through", "to", "too", "under", 
+    "until", "up", "very", "was", "we", "we'd", "we'll", "we're", "we've", "well", "were", 
+    "what", "what's", "when", "when's", "where", "where's", "which", "while", "who", "who's", 
+    "whom", "why", "why's", "with", "would", "you", "you'd", "you'll", "you're", "you've", 
+    "your", "yours", "yourself", "yourselves"
+];
 let limit_g = 0,
   skip_g = 0,
   total_g = 0;
